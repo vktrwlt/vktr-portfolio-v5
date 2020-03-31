@@ -1,16 +1,15 @@
 html(lang="en-us")
 	head
-		title #{metadata.title}
-		// Meta Tags
+		title #{siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].metaTitle : site.metaTitle }
+		//- Meta Tags
 		meta(name="viewport", content="width=device-width, initial-scale=1")
-		meta(name="description", content=metadata.description)
-		meta(name="author", content=metadata.author)
-		link(rel="canonical", href="")
+		meta(name="description", content=siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].metaDescription : site.metaTitle)
+		meta(name="author", content=site.author)
+		link(rel="canonical", href=site.url + page.url)
 		link(rel="stylesheet", href=manifest['main.css'])
 
-	a(href=manifest['main.css']) lol
-
-	body
+- var bodyClass = siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].bodyClass : ""
+	body(class=bodyClass)
 		block content
 
 	script(src=manifest['main.js'])
