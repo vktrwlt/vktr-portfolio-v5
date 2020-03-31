@@ -1,0 +1,16 @@
+html(lang="en-us")
+	head
+		title #{metadata.title}
+		// Meta Tags
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="description", content=metadata.description)
+		meta(name="author", content=metadata.author)
+		link(rel="canonical", href="")
+		link(rel="stylesheet", href=manifest['main.css'])
+
+	a(href=manifest['main.css']) lol
+
+	body
+		block content
+
+	script(src=manifest['main.js'])
