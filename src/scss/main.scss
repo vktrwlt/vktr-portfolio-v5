@@ -2,16 +2,23 @@
 @import "./core/generic_boxsizing";
 @import "./vendors/tailwind";
 
-.btn {
-	@apply font-bold py-2 px-4 rounded inline-block my-4;
-}
-.btn-blue {
-	@apply bg-blue-500 text-white;
-	&:hover {
-		@apply bg-blue-700;
-	}
+// * {
+// 	border: 1px solid rgba(red, 0.15);
+// }
+
+$blue-to-purple-gradient: linear-gradient(to left, #4776e6, #8e54e9);
+#menu-toggle:checked + #menu {
+	display: block;
 }
 
-* {
-	border: 1px solid red;
+.header-accent {
+	@apply absolute top-0 left-0 right-0;
+	background: blue;
+	height: 3px;
+	width: 100%;
+}
+
+.footer-bg {
+	@apply bg-blue;
+	background: $blue-to-purple-gradient;
 }

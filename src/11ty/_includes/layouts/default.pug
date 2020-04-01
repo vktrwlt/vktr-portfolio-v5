@@ -1,15 +1,24 @@
-html(lang="en-us")
+doctype html
+html(lang='en-us')
 	head
-		title #{siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].metaTitle : site.metaTitle }
 		//- Meta Tags
-		meta(name="viewport", content="width=device-width, initial-scale=1")
-		meta(name="description", content=siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].metaDescription : site.metaTitle)
-		meta(name="author", content=site.author)
-		link(rel="canonical", href=site.url + page.url)
-		link(rel="stylesheet", href=manifest['main.css'])
+		title #{siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].metaTitle : site.metaTitle }
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(
+			name='description',
+			content=siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].metaDescription : site.metaTitle
+		)
+		meta(name='author', content=site.author)
+		link(rel='canonical', href=site.url + page.url)
+		link(rel='stylesheet', href=manifest["main.css"])
 
-- var bodyClass = siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].bodyClass : ""
+	include ../sprites/sprites.svg
+
+- var bodyClass = siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].bodyClass : "";
 	body(class=bodyClass)
-		block content
-
-	script(src=manifest['main.js'])
+		include ../partials/header.pug
+		.flex.flex-col.min-h-screen
+			include ../partials/main.pug
+				block content
+			include ../partials/footer.pug
+	script(src=manifest["main.js"])

@@ -3,7 +3,7 @@
   "puglint.run": "onType",
   "disallowAttributeConcatenation": null,
   "disallowBlockExpansion": null,
-  "disallowClassAttributeWithStaticValue": true,
+  "disallowClassAttributeWithStaticValue": null,
   "disallowClassLiterals": null,
   "disallowClassLiteralsBeforeAttributes": null,
   "disallowClassLiteralsBeforeIdLiterals": null,
@@ -29,10 +29,7 @@
     { "input[type=submit]": "value" }
   ],
   "requireStrictEqualityOperators": true,
-  "validateAttributeSeparator": {
-    "separator": ", ",
-    "multiLineSeparator": "\n  "
-  },
+  "validateAttributeSeparator": null,
   "validateIndentation": "\t",
   "validateLineBreaks": "LF",
   "validateSelfClosingTags": true

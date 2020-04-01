@@ -1,17 +1,17 @@
-const path = require("path")
-const WebpackAssetsManifest = require("webpack-assets-manifest")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const paths = require("../../config/paths")
-const autoprefixer = require("autoprefixer")
+const path = require("path");
+const WebpackAssetsManifest = require("webpack-assets-manifest");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const paths = require("../../config/paths");
+const autoprefixer = require("autoprefixer");
 const tailwind = require("tailwindcss")(
 	path.resolve(paths.config, "tailwind.config.js")
-)
+);
 const purgecss = require("@fullhuman/postcss-purgecss")({
 	content: [path.resolve(paths.src, "**/*.pug")],
 	defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
-})
+});
 
-const isProduction = process.env.NODE_ENV === "production"
+const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
 	entry: [
@@ -62,11 +62,17 @@ module.exports = {
 			output: path.resolve(paths.dist, "manifest.json"),
 			publicPath: "/",
 			writeToDisk: true,
+			apply(manifest) {
+				manifest.set("year", new Date().getFullYear());
+			},
 		}),
 		new WebpackAssetsManifest({
 			output: path.resolve(paths.src, "11ty/_data/manifest.json"),
 			publicPath: "/",
 			writeToDisk: true,
+			apply(manifest) {
+				manifest.set("year", new Date().getFullYear());
+			},
 		}),
 	],
-}
+};
