@@ -1,18 +1,19 @@
-header(class="fixed top-0 left-0 right-0 py-6 px-12 bg-white flex flex-wrap items-center justify-center")
-	div(class="header-accent")
-	div(class="flex-1 flex justify-between items-center h-12")
-		a(href="#" class="text-xl font-bold text-gray-900") Victor Tsang
+header(class="fixed top-0 left-0 right-0 w-full xld:bg-white xld:shadow")
+	div(class="py-4 px-12  flex flex-wrap items-center justify-center w-full 3xl:max-w-screen-2xl 3xl:mx-auto ")
+		div(class="header-accent")
+		div(class="flex-1 flex justify-between items-center h-12")
+			a(href="#" class="text-xl font-bold text-gray-900") Victor Tsang
 
-	label(for="menu-toggle" class="cursor-pointer sm:hidden block")
-		svg(width="24", height="24")
-			use(xlink:href= "#hamburger")
+		label(for="menu-toggle" class="cursor-pointer sm:hidden block")
+			svg(width="24", height="24")
+				use(xlink:href= "#hamburger")
 
-	input(class="hidden" type="checkbox" id="menu-toggle")
+		input(class="hidden" type="checkbox" id="menu-toggle")
 
-	div(id="menu" class="hidden sm:flex sm:items-center sm:w-auto w-full")
-		nav(class="text-xl")
-			ul(class="sm:flex items-center justify-between text-base text-gray-700 text-xl font-medium")
-				li(class="mr-8 py-4 sm:py-0")
-					a(href="#", class="block") Work
-				li
-					a(href="#", class="block") About
+		div(id="menu" class="hidden sm:flex sm:items-center sm:w-auto w-full")
+			nav(class="text-xl")
+				ul(class="sm:flex items-center justify-between text-base text-gray-700 text-xl font-medium")
+					li(class="mr-8 py-4 sm:py-0")
+						a(href="#", class="block") Portfolio
+					li
+						a(href="#", class="block") About

@@ -12,13 +12,19 @@ $blue-to-purple-gradient: linear-gradient(to left, #4776e6, #8e54e9);
 }
 
 .header-accent {
-	@apply absolute top-0 left-0 right-0;
-	background: blue;
+	@apply fixed top-0 left-0 right-0 bg-custom-blue;
+
+	background: $blue-to-purple-gradient;
 	height: 3px;
-	width: 100%;
+	width: 100vw;
 }
 
 .footer-bg {
-	@apply bg-blue;
+	@apply bg-custom-blue;
 	background: $blue-to-purple-gradient;
+}
+
+.u-max-responsive-img {
+	max-width: 100%;
+	height: auto;
 }
