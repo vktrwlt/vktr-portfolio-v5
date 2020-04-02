@@ -8,9 +8,4 @@ module.exports = {
 	time: () => {
 		return new Date(); // Simplest example, could use Moment.js to return another format.
 	},
-	eleventyComputed: {
-		myFunction: () => {
-			return new Date(); // Simplest example, could use Moment.js to return another format.
-		},
-	},
 };

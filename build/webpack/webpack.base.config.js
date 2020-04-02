@@ -7,7 +7,11 @@ const tailwind = require("tailwindcss")(
 	path.resolve(paths.config, "tailwind.config.js")
 );
 const purgecss = require("@fullhuman/postcss-purgecss")({
-	content: [path.resolve(paths.src, "**/*.pug")],
+	content: [
+		path.resolve(paths.src, "**/*.pug"),
+		path.resolve(paths.src, "**/*.js"),
+		path.resolve(paths.src, "**/*.json"),
+	],
 	defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
 });
 
