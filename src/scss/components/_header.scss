@@ -1,0 +1,43 @@
+.header-accent {
+	@apply fixed top-0 left-0 right-0 bg-custom-blue w-full;
+
+	background: $blue-to-purple-gradient;
+	height: 3px;
+}
+
+nav li {
+	@apply py-4;
+	&:not(:last-child) {
+		@apply mr-8;
+	}
+}
+@screen sm {
+	nav li {
+		@apply py-0;
+	}
+}
+
+nav li a {
+	&.active {
+		@apply text-custom-purple;
+	}
+	// Underline
+	&::after {
+		content: "";
+		display: block;
+
+		height: 3px;
+		width: 0;
+		@apply bg-gray-700;
+	}
+
+	// Hover Underline
+	&:hover::after {
+		width: 100%;
+		transition: width 0.3s ease 0s;
+	}
+}
+// mobile menu
+#menu-toggle:checked + #menu {
+	@apply block;
+}

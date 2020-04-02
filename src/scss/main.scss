@@ -2,42 +2,8 @@
 @import "./core/generic_boxsizing";
 @import "./vendors/tailwind";
 
-// * {
-// 	border: 1px solid rgba(red, 0.15);
-// }
+@import "./utils/variables";
+@import "./utils/utilities";
 
-$blue-to-purple-gradient: linear-gradient(to left, #4776e6, #8e54e9);
-#menu-toggle:checked + #menu {
-	display: block;
-}
-
-.header-accent {
-	@apply fixed top-0 left-0 right-0 bg-custom-blue;
-
-	background: $blue-to-purple-gradient;
-	height: 3px;
-	width: 100vw;
-}
-
-nav li {
-	@apply mr-8 py-4;
-}
-@screen sm {
-	nav li {
-		@apply py-0;
-	}
-}
-
-nav li a.active {
-	@apply text-custom-purple;
-}
-
-.footer-bg {
-	@apply bg-custom-blue;
-	background: $blue-to-purple-gradient;
-}
-
-.u-max-responsive-img {
-	max-width: 100%;
-	height: auto;
-}
+@import "./components/header";
+@import "./components/footer";
