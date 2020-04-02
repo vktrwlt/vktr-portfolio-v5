@@ -21,7 +21,7 @@
   "maximumNumberOfLines": null,
   "requireLineFeedAtFileEnd": true,
   "requireLowerCaseTags": true,
-  "requireSpaceAfterCodeOperator": true,
+  "requireSpaceAfterCodeOperator": null,
   "requireSpacesInsideAttributeBrackets": null,
   "requireSpecificAttributes": [
     { "img": "alt" },

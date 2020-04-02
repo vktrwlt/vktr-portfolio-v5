@@ -5,7 +5,7 @@ block content
 		h1(class="text-2xl lg:text-3xl")
 			span(class="text-custom-blue") Hello!&nbsp;
 			| My name is Victor &mdash; a full-stack developer passionate about front-end development and creating attractive digital experiences
-	section(class="mt-24")
-		h2(class="uppercase") Featured Projects
-		div.mt-16
-			include ../_includes/components/cards.pug
+	section
+		h2(class="mt-16 mb-8 uppercase") Featured Projects
+		div
+			+portfolioList

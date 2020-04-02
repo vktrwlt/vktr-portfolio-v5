@@ -9,4 +9,4 @@ module.exports = {
 		metaDescription: "About Me",
 		bodyClass: "about",
 	},
-}
+};

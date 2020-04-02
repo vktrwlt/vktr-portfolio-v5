@@ -19,6 +19,19 @@ $blue-to-purple-gradient: linear-gradient(to left, #4776e6, #8e54e9);
 	width: 100vw;
 }
 
+nav li {
+	@apply mr-8 py-4;
+}
+@screen sm {
+	nav li {
+		@apply py-0;
+	}
+}
+
+nav li a.active {
+	@apply text-custom-purple;
+}
+
 .footer-bg {
 	@apply bg-custom-blue;
 	background: $blue-to-purple-gradient;

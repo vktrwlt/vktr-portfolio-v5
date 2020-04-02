@@ -1,8 +1,11 @@
 doctype html
-html(lang='en-us')
+//- Import mixins here to use globally
+include ../../_includes/mixins/mixins.pug
+html(lang='en-us' class='antialiased overflow-y-scroll')
 	head
 		//- Meta Tags
 		title #{siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].metaTitle : site.metaTitle }
+		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		meta(
 			name='description',
@@ -16,8 +19,9 @@ html(lang='en-us')
 
 - var bodyClass = siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].bodyClass : "";
 	body(class=bodyClass)
+		a(class="sr-only" href="#main") Skip to content
 		include ../partials/header.pug
-		.flex.flex-col.min-h-screen
+		div.flex.flex-col.min-h-screen
 			include ../partials/main.pug
 				block content
 			include ../partials/footer.pug
