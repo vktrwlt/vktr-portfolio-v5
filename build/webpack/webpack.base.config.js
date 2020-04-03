@@ -19,12 +19,14 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
-	entry: [
-		path.resolve(paths.src, "js/main.js"),
-		path.resolve(paths.src, "scss/main.scss"),
-	],
+	entry: {
+		critical: path.resolve(paths.src, "js/critical.js"),
+		main: path.resolve(paths.src, "js/main.js"),
+		main: path.resolve(paths.src, "scss/main.scss"),
+	},
 	output: {
 		path: paths.dist,
+		filename: "[name].js",
 	},
 	module: {
 		rules: [

@@ -1,11 +1,12 @@
 doctype html
 //- Import mixins here to use globally
 include ../../_includes/mixins/mixins.pug
-html(lang='en-us' class='antialiased overflow-y-scroll')
+html(lang='en-us' class='antialiased overflow-y-scroll no-js')
 	head
 		//- Meta Tags
 		title #{siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].metaTitle : site.metaTitle }
 		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		meta(
 			name='description',
@@ -13,9 +14,12 @@ html(lang='en-us' class='antialiased overflow-y-scroll')
 		)
 		meta(name='author', content=site.author)
 		link(rel='canonical', href=site.url + page.url)
+		link(rel="manifest" href="/manifest.json")
+		link(rel="apple-touch-icon" href="/apple-touch-icon.png")
+		meta(name="theme-color" content="#317EFB")
 		//- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 		link(rel='stylesheet', href=manifest["main.css"])
-
+		script(src=manifest["critical.js"])
 	include ../sprites/sprites.svg
 
 - var bodyClass = siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].bodyClass : "";
