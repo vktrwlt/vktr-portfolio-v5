@@ -1,7 +1,7 @@
 doctype html
 //- Import mixins here to use globally
 include ../../_includes/mixins/mixins.pug
-html(lang='en-us' class='antialiased overflow-y-scroll no-js')
+html(lang='en-us' class='antialiased overflow-y-scroll')
 	head
 		//- Meta Tags
 		title #{siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].metaTitle : site.metaTitle }
@@ -19,7 +19,7 @@ html(lang='en-us' class='antialiased overflow-y-scroll no-js')
 		meta(name="theme-color" content="#317EFB")
 		//- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 		link(rel='stylesheet', href=manifest["main.css"])
-		script(src=manifest["critical.js"])
+		script(async src=manifest["critical.js"])
 	include ../sprites/sprites.svg
 
 - var bodyClass = siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].bodyClass : "";
