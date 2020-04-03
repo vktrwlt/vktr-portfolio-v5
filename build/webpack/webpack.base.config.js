@@ -20,7 +20,7 @@ const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
 	entry: {
-		critical: path.resolve(paths.src, "js/critical.js"),
+		sw: path.resolve(paths.src, "js/sw.js"),
 		main: path.resolve(paths.src, "js/main.js"),
 		main: path.resolve(paths.src, "scss/main.scss"),
 	},
