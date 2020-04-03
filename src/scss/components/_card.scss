@@ -1,0 +1,33 @@
+.card {
+	&:not(:last-child) {
+		@apply mb-12;
+	}
+}
+
+// show underline on mobile
+.card__action {
+	&::after {
+		content: "";
+		display: block;
+		height: 3px;
+		width: 100%;
+		@apply bg-gray-700;
+	}
+}
+
+// hover underline above mobile
+@screen sm {
+	.card {
+		&:hover {
+			.card__action::after {
+				width: 100%;
+				transition: width 0.3s ease 0s;
+			}
+		}
+	}
+	.card__action {
+		&::after {
+			width: 0;
+		}
+	}
+}

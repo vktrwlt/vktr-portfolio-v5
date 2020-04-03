@@ -1,8 +1,13 @@
 .header-accent {
-	@apply fixed top-0 left-0 right-0 bg-custom-blue w-full;
+	@apply hidden;
+}
+@screen sm {
+	.header-accent {
+		@apply block fixed top-0 left-0 right-0 bg-custom-blue w-full;
 
-	background: $blue-to-purple-gradient;
-	height: 3px;
+		background: $blue-to-purple-gradient;
+		height: 3px;
+	}
 }
 
 nav li {
@@ -22,22 +27,28 @@ nav li a {
 		@apply text-custom-purple;
 	}
 	// Underline
-	&::after {
-		content: "";
-		display: block;
+	@screen sm {
+		&::after {
+			content: "";
+			display: block;
 
-		height: 3px;
-		width: 0;
-		@apply bg-gray-700;
-	}
+			height: 3px;
+			width: 0;
+			@apply bg-gray-700;
+		}
 
-	// Hover Underline
-	&:hover::after {
-		width: 100%;
-		transition: width 0.3s ease 0s;
+		// Hover Underline
+		&:hover::after {
+			width: 100%;
+			transition: width 0.3s ease 0s;
+		}
 	}
 }
 // mobile menu
 #menu-toggle:checked + #menu {
-	@apply block;
+	@apply block mt-2;
+}
+
+.hamburger-color {
+	@apply text-custom-purple;
 }
