@@ -11,6 +11,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 		path.resolve(paths.src, "**/*.pug"),
 		path.resolve(paths.src, "**/*.js"),
 		path.resolve(paths.src, "**/*.json"),
+		path.resolve(paths.src, "**/*.svg"),
 	],
 	defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
 });
