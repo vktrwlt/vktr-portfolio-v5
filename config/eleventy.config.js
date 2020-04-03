@@ -6,10 +6,7 @@ module.exports = function (eleventyConfig) {
 
 	// Include our static assets for every build
 	eleventyConfig.addPassthroughCopy({ "src/images": "images" });
-	eleventyConfig.addPassthroughCopy("robots.txt");
-	eleventyConfig.addFilter("myFilter", function () {
-		return "h";
-	});
+
 	// minify the html output when running in prod
 	if (projectVars.production) {
 		eleventyConfig.addTransform(
