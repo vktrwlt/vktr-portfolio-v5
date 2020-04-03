@@ -1,13 +1,8 @@
 .header-accent {
-	@apply hidden;
-}
-@screen sm {
-	.header-accent {
-		@apply block fixed top-0 left-0 right-0 bg-custom-blue w-full;
+	@apply block fixed top-0 left-0 right-0 bg-custom-blue w-full;
 
-		background: $blue-to-purple-gradient;
-		height: 3px;
-	}
+	background: $blue-to-purple-gradient;
+	height: 3px;
 }
 
 nav li {
