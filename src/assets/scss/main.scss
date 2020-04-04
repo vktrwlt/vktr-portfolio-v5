@@ -2,8 +2,9 @@
 @import "./core/generic_boxsizing";
 @import "./vendors/tailwind";
 
-@import "./utils/variables";
 @import "./utils/utilities";
+
+@import "./base/_global";
 
 @import "./components/header";
 @import "./components/footer";

@@ -4,9 +4,6 @@ const pluginPWA = require("eleventy-plugin-pwa");
 module.exports = function (eleventyConfig) {
 	eleventyConfig.setLibrary("pug", pug);
 
-	// Include our static assets for every build
-	eleventyConfig.addPassthroughCopy({ "src/images": "images" });
-
 	// minify the html output when running in prod
 	if (projectVars.production) {
 		eleventyConfig.addPlugin(pluginPWA);
@@ -17,8 +14,10 @@ module.exports = function (eleventyConfig) {
 	}
 
 	// Copy `static/root` to `dist/`
-	eleventyConfig.addPassthroughCopy({ "static/root": "/" });
-	console.log(projectVars.time);
+	eleventyConfig.addPassthroughCopy({ "src/static/": "/" });
+	eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "/assets/fonts" });
+	eleventyConfig.addPassthroughCopy({ "src/assets/images": "/assets/images" });
+
 	return {
 		dir: {
 			input: "src/11ty/pages",

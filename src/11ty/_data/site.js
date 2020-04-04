@@ -6,4 +6,5 @@ module.exports = {
 	linkedIn: "https://www.linkedin.com/in/vktrwlt/",
 	github: "https://github.com/vktrwlt",
 	email: "victorwltsang@gmail.com",
+	codepen: "https://codepen.io/victorwltsang"
 };

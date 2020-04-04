@@ -1,12 +1,5 @@
-.header-accent {
-	@apply block fixed top-0 left-0 right-0 bg-custom-blue w-full;
-
-	background: $blue-to-purple-gradient;
-	height: 3px;
-}
-
 nav li {
-	@apply py-4;
+	@apply py-4 w-full;
 	&:not(:last-child) {
 		@apply mr-8;
 	}
@@ -18,8 +11,11 @@ nav li {
 }
 
 nav li a {
+	display: block;
+
+	width: 100%;
 	&.active {
-		@apply text-custom-purple;
+		@apply text-custom-blue;
 	}
 	// Underline
 	@screen sm {
@@ -45,5 +41,5 @@ nav li a {
 }
 
 .hamburger-color {
-	@apply text-custom-purple;
+	@apply text-custom-blue;
 }

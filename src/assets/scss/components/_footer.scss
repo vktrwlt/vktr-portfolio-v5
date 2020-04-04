@@ -1,0 +1,10 @@
+.footer {
+	@apply bg-gray-900;
+}
+
+.footer__icon-link{
+	@apply block p-3 border border-white;
+	&:hover{
+		@apply border-custom-blue bg-custom-blue;
+	}
+}

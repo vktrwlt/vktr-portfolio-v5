@@ -13,11 +13,15 @@ html(lang='en-us' class='antialiased overflow-y-scroll')
 			content=siteAttributes[page.fileSlug] ? siteAttributes[page.fileSlug].metaDescription : site.metaTitle
 		)
 		meta(name='author', content=site.author)
+		meta(name="theme-color" content="#317EFB")
+		link(rel="preload" href="/assets/fonts/ubuntu-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin)
+		style
+			include ../inline/style.css
+
 		link(rel='canonical', href=site.url + page.url)
 		link(rel="manifest" href="/manifest.json")
 		link(rel="apple-touch-icon" href="/apple-touch-icon.png")
-		meta(name="theme-color" content="#317EFB")
-		//- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+		link(rel="shortcut icon", href="/favicon.ico")
 		link(rel='stylesheet', href=manifest["main.css"])
 		if(project.production)
 			script(defer src=manifest["sw.js"])

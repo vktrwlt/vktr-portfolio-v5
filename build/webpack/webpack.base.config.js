@@ -20,13 +20,13 @@ const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
 	entry: {
-		sw: path.resolve(paths.src, "js/sw.js"),
-		main: path.resolve(paths.src, "js/main.js"),
-		main: path.resolve(paths.src, "scss/main.scss"),
+		sw: path.resolve(paths.srcAssets, "js/sw.js"),
+		main: path.resolve(paths.srcAssets, "js/main.js"),
+		main: path.resolve(paths.srcAssets, "scss/main.scss"),
 	},
 	output: {
-		path: paths.dist,
-		filename: "[name].js",
+		path: path.resolve(paths.dist, "assets/"),
+		filename: "js/[name].js",
 	},
 	module: {
 		rules: [
@@ -67,7 +67,7 @@ module.exports = {
 	plugins: [
 		new WebpackAssetsManifest({
 			output: path.resolve(paths.dist, "manifest.json"),
-			publicPath: "/",
+			publicPath: "/assets/",
 			writeToDisk: true,
 			apply(manifest) {
 				manifest.set("year", new Date().getFullYear());
@@ -75,7 +75,7 @@ module.exports = {
 		}),
 		new WebpackAssetsManifest({
 			output: path.resolve(paths.src, "11ty/_data/manifest.json"),
-			publicPath: "/",
+			publicPath: "/assets/",
 			writeToDisk: true,
 			apply(manifest) {
 				manifest.set("year", new Date().getFullYear());
