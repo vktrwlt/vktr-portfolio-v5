@@ -3,4 +3,4 @@ mixin navItems
 		- var isActive = item.id === page.fileSlug ? "active" : ""
 		- var current = item.id === page.fileSlug ? "page" : "false"
 		li
-			a(class=isActive href=item.url aria-current=current) #{item.title}
+			a(class=isActive href=item.url aria-current=current rel="prefetch") #{item.title}
