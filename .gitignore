@@ -35,3 +35,5 @@ pids
 # Optional npm cache directory
 .npm
 
+# src files
+*.sketch
