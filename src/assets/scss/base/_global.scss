@@ -3,3 +3,8 @@
 p {
 	@apply text-lg;
 }
+
+h1,
+h2 {
+	@apply leading-tight;
+}

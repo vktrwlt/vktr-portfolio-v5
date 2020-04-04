@@ -1,9 +1,3 @@
-.card {
-	&:not(:last-child) {
-		@apply mb-12;
-	}
-}
-
 // show underline on mobile
 .card__action {
 	&::after {
@@ -19,6 +13,12 @@
 @screen sm {
 	.card {
 		&:hover {
+			.card__action::after {
+				width: 100%;
+				transition: width 0.3s ease 0s;
+			}
+		}
+		&:focus {
 			.card__action::after {
 				width: 100%;
 				transition: width 0.3s ease 0s;

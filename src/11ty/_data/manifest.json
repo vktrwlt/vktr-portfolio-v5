@@ -1,6 +1,6 @@
 {
-  "main.css": "/assets/css/main.bdac042da639aa37cece.css",
-  "main.js": "/assets/js/main.38bc78422e0cebd1334f.js",
-  "sw.js": "/assets/js/sw.38bc78422e0cebd1334f.js",
+  "main.css": "/assets/css/main.css",
+  "main.js": "/assets/js/main.js",
+  "sw.js": "/assets/js/sw.js",
   "year": 2020
 }
