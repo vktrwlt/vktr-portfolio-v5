@@ -9,12 +9,13 @@ module.exports = function (eleventyConfig) {
 
 	// minify the html output when running in prod
 	if (projectVars.production) {
+		eleventyConfig.addPlugin(pluginPWA);
 		eleventyConfig.addTransform(
 			"htmlmin",
 			require("../build/scripts/minify-html")
 		);
 	}
-	eleventyConfig.addPlugin(pluginPWA);
+
 	// Copy `static/root` to `dist/`
 	eleventyConfig.addPassthroughCopy({ "static/root": "/" });
 	console.log(projectVars.time);
