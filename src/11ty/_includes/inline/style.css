@@ -3,6 +3,7 @@
 	font-family: "Ubuntu";
 	font-style: normal;
 	font-weight: 400;
+	font-display: swap;
 	src: url("/assets/fonts/ubuntu-v14-latin-regular.eot"); /* IE9 Compat Modes */
 	src: local("Ubuntu Regular"), local("Ubuntu-Regular"),
 		url("/assets/fonts/ubuntu-v14-latin-regular.eot?#iefix")
@@ -21,6 +22,7 @@
 	font-family: "Ubuntu";
 	font-style: normal;
 	font-weight: bold;
+	font-display: swap;
 	src: url("/assets/fonts/ubuntu-v14-latin-500.eot"); /* IE9 Compat Modes */
 	src: local("Ubuntu Medium"), local("Ubuntu-Medium"),
 		url("/assets/fonts/ubuntu-v14-latin-500.eot?#iefix")
