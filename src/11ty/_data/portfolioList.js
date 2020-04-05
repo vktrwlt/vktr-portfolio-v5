@@ -4,7 +4,7 @@ module.exports = [
 		title: "Pugsum",
 		description:
 			"When you combine pug and possum(11ty) to make something awesome, a 11ty portfolio using Pug templates",
-		imageUrl: "/assets/images/pugsum/thumbnail.png",
+		imagePath: "/assets/images/pugsum",
 		url: "/project/pugsum",
 		bgColor: "bg-blue-200",
 	},
@@ -21,7 +21,7 @@ module.exports = [
 		title: "Dangfoods",
 		description:
 			"Custom WordPress Development for Dangfood's <span class='inline-block'>e-Commerce</span> site",
-		imageUrl: "/assets/images/dangfoods/thumbnail.png",
+		imagePath: "/assets/images/dangfoods",
 		headerUrl: "/assets/images/dangfoods/header.jpg",
 		url: "/project/dangfoods",
 		bgColor: "bg-green-200",

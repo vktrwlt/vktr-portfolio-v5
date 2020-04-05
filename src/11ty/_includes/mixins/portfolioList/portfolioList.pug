@@ -9,5 +9,5 @@ mixin portfolioList
 						div(class="mt-8 flex")
 							p(class="card__action text-lg font-bold ") View Project
 				div(class="mt-4 pl-16 flex justify-end")
-					img(src=project.imageUrl , alt="")
+					+picture(project.imagePath,"thumbnail",['webp','png'], "")
 						//- don't need alt text since img is a decoration and have surround desc text
