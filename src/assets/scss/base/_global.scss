@@ -1,10 +1,8 @@
-/* ubuntu-regular - latin */
-
 p {
 	@apply text-lg;
 }
 
 h1,
 h2 {
-	@apply leading-tight;
+	@apply leading-tight mb-4;
 }

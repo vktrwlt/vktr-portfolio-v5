@@ -1,0 +1,5 @@
+extends ../../_includes/layouts/default.pug
+
+block content
+	- var projectIndex = portfolioList.findIndex(project => project.id === page.fileSlug)
+	+project(projectIndex)

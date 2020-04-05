@@ -1,0 +1,27 @@
+mixin project(index)
+	- var project = portfolioList[index]
+	section.mb-4.text-center
+		h1.headline-1 #{project.title}
+		p(class="headline-3 w-10/12 lg:w-8/12 mx-auto") !{project.description}
+		div.my-8
+			img(src=project.headerUrl alt="")
+	section.my-4
+		h2.headline-2.text-bold My Role
+		ul.list-disc
+			if project.role
+				each role in project.role
+					li.ml-8
+						p !{role}
+	section.my-4
+		h2.headline-2.text-bold Tech Stack
+		ul(class="tech-stack__list")
+			if project.tech
+				each stack in project.tech
+					li(class="tech-stack__item")
+						p !{stack}
+	section.my-4
+		h2.headline-2.text-bold About this project
+		div
+			if project.details
+				each paragraph in project.details
+					p(class="mb-4 last:mb-0") !{paragraph}
