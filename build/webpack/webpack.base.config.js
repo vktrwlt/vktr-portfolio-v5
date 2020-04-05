@@ -3,6 +3,10 @@ const WebpackAssetsManifest = require("webpack-assets-manifest");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const paths = require("../../config/paths");
 const autoprefixer = require("autoprefixer");
+const ImageminWebpackPlugin = require("imagemin-webpack-plugin").default;
+const ImageminWebP = require("imagemin-webp");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
 const tailwind = require("tailwindcss")(
 	path.resolve(paths.config, "tailwind.config.js")
 );
@@ -80,6 +84,19 @@ module.exports = {
 			apply(manifest) {
 				manifest.set("year", new Date().getFullYear());
 			},
+		}),
+		new CopyWebpackPlugin([
+			{
+				from: "./src/assets/images/**/*.{png,jpg,jpeg}",
+				to: "./images/[folder]/[name].webp",
+			},
+		]),
+		new ImageminWebpackPlugin({
+			plugins: [
+				ImageminWebP({
+					quality: 75,
+				}),
+			],
 		}),
 	],
 };

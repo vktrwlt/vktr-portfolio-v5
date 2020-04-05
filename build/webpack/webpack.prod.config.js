@@ -1,9 +1,9 @@
-const merge = require("webpack-merge")
-const webpackBaseConfig = require("./webpack.base.config.js")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const TerserPlugin = require("terser-webpack-plugin")
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
-const cssnano = require("cssnano")
+const merge = require("webpack-merge");
+const webpackBaseConfig = require("./webpack.base.config.js");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const cssnano = require("cssnano");
 
 module.exports = merge(webpackBaseConfig, {
 	mode: "production",
@@ -25,4 +25,4 @@ module.exports = merge(webpackBaseConfig, {
 			}),
 		],
 	},
-})
+});
