@@ -21,7 +21,8 @@ html(lang='en-us' class='antialiased overflow-y-scroll')
 
 		script
 			include ../inline/ga.js
-		script(async src='https://www.google-analytics.com/analytics.js')
+		script(defer src='https://www.google-analytics.com/analytics.js')
+		link(rel="preconnect" href="https://stats.g.doubleclick.net")
 
 		link(rel='canonical', href=site.url + page.url)
 		link(rel="manifest" href="/manifest.json")
