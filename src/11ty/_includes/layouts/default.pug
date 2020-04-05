@@ -19,9 +19,6 @@ html(lang='en-us' class='antialiased overflow-y-scroll')
 		style
 			include ../inline/style.css
 
-		script
-			include ../inline/ga.js
-		script(defer src='https://www.google-analytics.com/analytics.js')
 		link(rel="preconnect" href="https://stats.g.doubleclick.net")
 
 		link(rel='canonical', href=site.url + page.url)
@@ -41,4 +38,6 @@ html(lang='en-us' class='antialiased overflow-y-scroll')
 			include ../partials/main.pug
 				block content
 			include ../partials/footer.pug
+	script
+		include ../inline/ga.js
 	//- script(src=manifest["main.js"])
