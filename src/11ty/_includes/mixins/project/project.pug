@@ -22,6 +22,16 @@ mixin project(index)
 	section.my-4
 		h2.headline-2.text-bold About this project
 		div
-			if project.details
-				each paragraph in project.details
+			if project.about
+				each paragraph in project.about
 					p(class="mb-4 last:mb-0") !{paragraph}
+	if(project.moreDetails)
+		each section in project.moreDetails
+			section.my-4
+				h2.headline-2.text-bold=section.sectionHeader
+				if(section.sectionHeaderImageName)
+					div.my-8
+						+picture(project.imagePath,"results-header",['webp','png'], "")
+				div
+					p(class="mb-4 last:mb-0") !{section.sectionDetails}
+
