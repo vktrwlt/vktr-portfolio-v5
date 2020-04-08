@@ -9,7 +9,7 @@ module.exports = [
 		bgColor: "bg-blue-200",
 		role: [
 			"Used 11ty to generate a portfolio that score all 100's in Google Lighthouse test",
-			"Developed a 11ty Tailwind Pug Starter Kit, check it out <a>here</a>",
+			"Developed a 11ty Tailwind Pug Starter Kit, check it out <a class='underline text-custom-blue' href='https://pugsum.netlify.com/' target='_blank'>here</a>",
 		],
 		tech: [
 			"11ty",
