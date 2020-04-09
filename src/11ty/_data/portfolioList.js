@@ -5,6 +5,7 @@ module.exports = [
 		description:
 			"When you combine pug and possum(11ty) to make something awesome, a 11ty portfolio using Pug templates",
 		imagePath: "/assets/images/pugsum",
+		headerUrl: "/assets/images/pugsum/header.png",
 		url: "/project/pugsum",
 		bgColor: "bg-blue-200",
 		role: [
