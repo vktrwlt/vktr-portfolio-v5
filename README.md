@@ -1,9 +1,5 @@
 # Eleventy + Tailwind + Webpack starter
 
-Check it out at [11ty-tailwind-webpack-starter.netlify.com](https://11ty-tailwind-webpack-starter.netlify.com/)
-
-Another minimal starting point for Eleventy projects using
-
 Features:
 
 - [11ty](https://www.11ty.io/) for templates and site generation
