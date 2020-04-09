@@ -1,4 +1,4 @@
-# Eleventy + Tailwind + Webpack starter
+# 11ty Pug Portfolio
 
 Features:
 
