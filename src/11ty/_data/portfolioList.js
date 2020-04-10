@@ -55,9 +55,9 @@ module.exports = [
 	// },
 	{
 		id: "dangfoods",
-		title: "Dangfoods",
+		title: "Dang foods",
 		description:
-			"Custom WordPress Development for Dangfood's <span class='inline-block'>e-Commerce</span> site",
+			"Custom WordPress Development for Dang foods' <span class='inline-block'>e-Commerce</span> site",
 		imagePath: "/assets/images/dangfoods",
 		heroName: "hero",
 		url: "/project/dangfoods",
