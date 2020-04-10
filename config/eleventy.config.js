@@ -12,6 +12,9 @@ module.exports = function (eleventyConfig) {
 			require("../build/scripts/minify-html")
 		);
 	}
+	eleventyConfig.setBrowserSyncConfig({
+		notify: true,
+	});
 
 	// Copy `static/root` to `dist/`
 	eleventyConfig.addPassthroughCopy({ "src/static/": "/" });
