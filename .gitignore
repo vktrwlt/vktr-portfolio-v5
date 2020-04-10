@@ -3,7 +3,7 @@
 
 # build artifacts
 dist/
-src/11ty/data/manifest.json
+
 
 # secrets
 .env
