@@ -18,7 +18,7 @@ document.addEventListener(
 		window,
 		document,
 		"script",
-		"https://www.google-analytics.com/analytics.js",
+		"/assets/js/analytics.js",
 		"ga"
 	)
 );
