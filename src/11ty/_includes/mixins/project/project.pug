@@ -4,7 +4,7 @@ mixin project(index)
 		h1.headline-1 #{project.title}
 		p(class="headline-3 w-10/12 lg:w-8/12 mx-auto") !{project.description}
 		div.my-8
-			img(src=project.headerUrl alt="")
+			+picture(project.imagePath,project.heroName,['webp','jpg'], "")
 	section.my-4
 		h2.headline-2.text-bold My Role
 		ul.list-disc
@@ -29,9 +29,8 @@ mixin project(index)
 		each section in project.moreDetails
 			section.my-4
 				h2.headline-2.text-bold=section.sectionHeader
-				if(section.sectionHeaderImageName)
-					div.my-8
-						+picture(project.imagePath,"results-header",['webp','png'], "")
 				div
 					p(class="mb-4 last:mb-0") !{section.sectionDetails}
-
+				if(section.projectStats)
+					div.my-8
+						+projectStats

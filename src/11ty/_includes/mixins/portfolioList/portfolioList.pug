@@ -1,13 +1,13 @@
 mixin portfolioList
 	each project, index in portfolioList
-		div(class="mb-8 md:mb-0 w-full md:w-1/2 md:p-4 md:flex")
+		div(class="mb-8 md:mb-0 w-full md:w-1/2 md:p-4 lg:p-6 md:flex")
 			a(class=`card ${project.bgColor}  shadow block  flex flex-col justify-between`, href=project.url, title=`View ${project.title}` rel="prefetch")
-				div(class="p-8 md:flex md:flex-col md:flex-1")
+				div(class="p-8 lg:p-10 md:flex md:flex-col md:flex-1")
 					h2(class="text-3xl mb-4") #{project.title}
 					p !{project.description}
 					div.mt-auto
 						div(class="mt-8 flex")
 							p(class="card__action text-lg font-bold ") View Project
-				div(class="mt-4 pl-16 flex justify-end")
+				div(class="mt-4 pl-16 lg:pl-24 flex justify-end")
 					+picture(project.imagePath,"thumbnail",['webp','png'], "")
 						//- don't need alt text since img is a decoration and have surround desc text

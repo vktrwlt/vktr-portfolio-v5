@@ -1,0 +1,17 @@
+.tech-stack__list {
+	@apply list-disc;
+}
+.tech-stack__item {
+	@apply ml-8;
+}
+@screen md {
+	.tech-stack__list {
+		@apply list-none flex flex-wrap items-start;
+	}
+	.tech-stack__item {
+		@apply ml-0 p-4 border-2 border-custom-blue;
+		&:not(:last-child) {
+			@apply mr-4 mb-4;
+		}
+	}
+}

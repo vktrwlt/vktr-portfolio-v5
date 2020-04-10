@@ -24,7 +24,6 @@ const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
 	entry: {
-		sw: path.resolve(paths.srcAssets, "js/sw.js"),
 		main: path.resolve(paths.srcAssets, "js/main.js"),
 		main: path.resolve(paths.srcAssets, "scss/main.scss"),
 	},
@@ -56,8 +55,7 @@ module.exports = {
 							parser: "postcss-scss",
 							plugins: () => [
 								tailwind,
-								autoprefixer,
-								...(isProduction ? [purgecss] : []),
+								...(isProduction ? [autoprefixer, purgecss] : []),
 							],
 						},
 					},
