@@ -14,14 +14,14 @@ document.addEventListener(
 		a.async = 0;
 		a.src = g;
 		m.parentNode.insertBefore(a, m);
-	})(
-		window,
-		document,
-		"script",
-		"/assets/js/analytics.js",
-		"ga"
-	)
+	})(window, document, "script", "/assets/js/analytics.js", "ga")
 );
 
 ga("create", "UA-131565495-1", "auto");
 ga("send", "pageview");
+
+if ("serviceWorker" in navigator) {
+	window.addEventListener("load", function () {
+		navigator.serviceWorker.register("/service-worker.js");
+	});
+}

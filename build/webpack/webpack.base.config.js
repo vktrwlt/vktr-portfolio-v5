@@ -24,6 +24,7 @@ const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
 	entry: {
+		defer: path.resolve(paths.srcAssets, "js/defer.js"),
 		main: path.resolve(paths.srcAssets, "js/main.js"),
 		main: path.resolve(paths.srcAssets, "scss/main.scss"),
 	},
