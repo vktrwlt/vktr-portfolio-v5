@@ -26,11 +26,11 @@ module.exports = {
 	entry: {
 		defer: path.resolve(paths.srcAssets, "js/defer.js"),
 		main: path.resolve(paths.srcAssets, "js/main.js"),
-		main: path.resolve(paths.srcAssets, "scss/main.scss"),
 	},
 	output: {
 		path: path.resolve(paths.dist, "assets/"),
-		filename: "js/[name].js",
+		publicPath: "assets/",
+		filename: "[name].js",
 	},
 	module: {
 		rules: [
@@ -46,8 +46,12 @@ module.exports = {
 			},
 			{
 				test: [/.css$|.scss$/],
+				exclude: /(node_modules)/,
 				use: [
-					MiniCssExtractPlugin.loader,
+					{
+						loader: MiniCssExtractPlugin.loader,
+						options: { hmr: !isProduction },
+					},
 					{ loader: "css-loader", options: { importLoaders: 1 } },
 					{
 						loader: "postcss-loader",
