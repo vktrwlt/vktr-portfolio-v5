@@ -6,7 +6,7 @@ const autoprefixer = require("autoprefixer");
 const ImageminWebpackPlugin = require("imagemin-webpack-plugin").default;
 const ImageminWebP = require("imagemin-webp");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-
+const webpack = require("webpack");
 const tailwind = require("tailwindcss")(
 	path.resolve(paths.config, "tailwind.config.js")
 );
@@ -23,15 +23,11 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
-	entry: {
-		defer: path.resolve(paths.srcAssets, "js/defer.js"),
-		main: path.resolve(paths.srcAssets, "js/main.js"),
-		main: path.resolve(paths.srcAssets, "scss/main.scss"),
-	},
-	output: {
-		path: path.resolve(paths.dist, "assets/"),
-		filename: "js/[name].js",
-	},
+	entry: [
+		path.resolve(paths.srcAssets, "js/main.js"),
+		path.resolve(paths.srcAssets, "scss/main.scss"),
+	],
+
 	module: {
 		rules: [
 			{
@@ -70,7 +66,7 @@ module.exports = {
 	plugins: [
 		new WebpackAssetsManifest({
 			output: path.resolve(paths.dist, "assets.json"),
-			publicPath: "/assets/",
+
 			writeToDisk: true,
 			apply(manifest) {
 				manifest.set("year", new Date().getFullYear());
@@ -78,7 +74,7 @@ module.exports = {
 		}),
 		new WebpackAssetsManifest({
 			output: path.resolve(paths.src, "11ty/_data/assets.json"),
-			publicPath: "/assets/",
+
 			writeToDisk: true,
 			apply(manifest) {
 				manifest.set("year", new Date().getFullYear());
@@ -90,6 +86,7 @@ module.exports = {
 				to: "./images/[folder]/[name].webp",
 			},
 		]),
+		new webpack.HotModuleReplacementPlugin(),
 		new ImageminWebpackPlugin({
 			plugins: [
 				ImageminWebP({
