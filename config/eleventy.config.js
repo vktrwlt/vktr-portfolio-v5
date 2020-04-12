@@ -6,11 +6,6 @@ const pluginPWA = require("eleventy-plugin-pwa");
 module.exports = function (eleventyConfig) {
 	eleventyConfig.setLibrary("pug", pug);
 
-	const assetsPath = path.resolve(paths.dist, "assets.json");
-
-	// Reload the page every time the JS/CSS are changed.
-	eleventyConfig.setBrowserSyncConfig({ files: [assetsPath] });
-
 	// Copy `static/root` to `dist/`
 	eleventyConfig.addPassthroughCopy({ "src/static/": "/" });
 	eleventyConfig.addPassthroughCopy({
