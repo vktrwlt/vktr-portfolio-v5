@@ -2,12 +2,11 @@ const path = require("path");
 const paths = require("../../config/paths");
 const merge = require("webpack-merge");
 const webpackBaseConfig = require("./webpack.base.config.js");
-const WebpackAssetsManifest = require("webpack-assets-manifest");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const cssnano = require("cssnano");
+const WebpackAssetsManifest = require("webpack-assets-manifest");
 
 const autoprefixer = require("autoprefixer");
 const tailwind = require("tailwindcss")(
@@ -26,9 +25,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 module.exports = merge(webpackBaseConfig, {
 	mode: "production",
 	output: {
-		path: path.resolve(paths.dist, "assets/"),
-		publicPath: "/",
-		filename: "js/[name].[hash].js",
+		filename: "assets/js/[name].[hash].js",
 	},
 	module: {
 		rules: [
@@ -54,22 +51,16 @@ module.exports = merge(webpackBaseConfig, {
 		],
 	},
 	plugins: [
+		new MiniCssExtractPlugin({
+			filename: "assets/css/[name].[chunkhash].css",
+		}),
 		new WebpackAssetsManifest({
 			output: path.resolve(paths.src, "11ty/_data/assets.json"),
-			publicPath: "/assets/",
+			publicPath: "/",
 			writeToDisk: true,
 			apply(manifest) {
 				manifest.set("year", new Date().getFullYear());
 			},
-		}),
-		new CopyWebpackPlugin([
-			{
-				from: "./src/assets/images/**/*.{png,jpg,jpeg}",
-				to: "./images/[folder]/[name].webp",
-			},
-		]),
-		new MiniCssExtractPlugin({
-			filename: "css/[name].[chunkhash].css",
 		}),
 	],
 	optimization: {

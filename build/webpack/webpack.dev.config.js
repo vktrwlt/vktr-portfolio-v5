@@ -4,18 +4,16 @@ const merge = require("webpack-merge");
 const webpackBaseConfig = require("./webpack.base.config.js");
 const chokidar = require("chokidar");
 const webpack = require("webpack");
-const WebpackAssetsManifest = require("webpack-assets-manifest");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const WebpackAssetsManifest = require("webpack-assets-manifest");
 const tailwind = require("tailwindcss")(
 	path.resolve(paths.config, "tailwind.config.js")
 );
 module.exports = merge(webpackBaseConfig, {
 	mode: "development",
 	output: {
-		path: path.resolve(paths.dist, "assets/js/"),
-		publicPath: "/assets/js/",
-		filename: "[name].js",
+		publicPath: "/assets/",
+		filename: "js/[name].js",
 	},
 	module: {
 		rules: [
@@ -52,9 +50,7 @@ module.exports = merge(webpackBaseConfig, {
 		hot: true,
 		overlay: true,
 		contentBase: paths.dist,
-		historyApiFallback: {
-			rewrites: [{ from: /.*/g, to: "/index.html" }],
-		},
+		index: "index.html",
 		host: "localhost",
 		port: 3000,
 		open: false,
@@ -62,22 +58,16 @@ module.exports = merge(webpackBaseConfig, {
 
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: "[name].css",
+			filename: "css/[name].css",
 		}),
 		new WebpackAssetsManifest({
 			output: path.resolve(paths.src, "11ty/_data/assets.json"),
-			publicPath: "/assets/js/",
+			publicPath: "/assets/",
 			writeToDisk: true,
 			apply(manifest) {
 				manifest.set("year", new Date().getFullYear());
 			},
 		}),
-		new CopyWebpackPlugin([
-			{
-				from: "./src/assets/images/**/*.{png,jpg,jpeg}",
-				to: "../images/[folder]/[name].webp",
-			},
-		]),
 		new webpack.HotModuleReplacementPlugin(),
 	],
 });

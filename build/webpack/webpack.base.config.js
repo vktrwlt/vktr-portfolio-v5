@@ -2,11 +2,15 @@ const path = require("path");
 const paths = require("../../config/paths");
 const ImageminWebpackPlugin = require("imagemin-webpack-plugin").default;
 const ImageminWebP = require("imagemin-webp");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
 	entry: {
-		defer: path.resolve(paths.srcAssets, "js/defer.js"),
 		main: path.resolve(paths.srcAssets, "js/main.js"),
+		defer: path.resolve(paths.srcAssets, "js/defer.js"),
+	},
+	output: {
+		path: path.resolve(paths.dist),
 	},
 	module: {
 		rules: [
@@ -23,6 +27,12 @@ module.exports = {
 		],
 	},
 	plugins: [
+		new CopyWebpackPlugin([
+			{
+				from: "./src/assets/images/**/*.{png,jpg,jpeg}",
+				to: "./assets/images/[folder]/[name].webp",
+			},
+		]),
 		new ImageminWebpackPlugin({
 			plugins: [
 				ImageminWebP({
