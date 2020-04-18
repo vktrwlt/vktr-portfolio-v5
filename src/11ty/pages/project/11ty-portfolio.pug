@@ -3,3 +3,6 @@ extends ../../_includes/layouts/default.pug
 block content
 	- var projectIndex = portfolioList.findIndex(project => project.id === page.fileSlug)
 	+project(projectIndex)
+	div
+		p View on &nbsp;
+			+externalLink('https://github.com/vktrwlt/11ty-tailwind-pug-portfolio','View my 11ty Tailwind Pug starter kit on Github', "Github")

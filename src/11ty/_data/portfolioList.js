@@ -1,16 +1,16 @@
 module.exports = [
 	{
-		id: "pugsum",
-		title: "Pugsum",
+		id: "11ty-portfolio",
+		title: "11ty portfolio",
 		description:
-			"When you combine pug and possum(11ty) to make something awesome, a 11ty portfolio using Pug templates",
-		imagePath: "/assets/images/pugsum",
+			"A static site portfolio built using 11ty, Pug templates, TailwindCSS, and Webpack",
+		imagePath: "/assets/images/11ty-portfolio",
 		heroName: "hero",
-		url: "/project/pugsum",
+		url: "/project/11ty-portfolio",
 		bgColor: "bg-blue-200",
 		role: [
 			"Used 11ty to generate a portfolio that score all 100's in Google Lighthouse test",
-			"Developed a 11ty Tailwind Pug Starter Kit. Available on <a class='underline text-custom-blue' href='https://github.com/vktrwlt/pugsum' target='_blank' rel='noopener noreferrer' title='View 11ty Tailwind Pug starter kit on Github'>Github</a>.",
+			"Developed a 11ty Tailwind Pug Starter Kit. Available on <a class='text-custom-blue' data-external='true' href='https://github.com/vktrwlt/pugsum' target='_blank' rel='noopener noreferrer' title='View my 11ty Tailwind Pug starter kit on Github'>Github</a>",
 		],
 		tech: [
 			"11ty",
@@ -23,24 +23,24 @@ module.exports = [
 			"CI/CD",
 		],
 		about: [
-			`Every year I like to work on my portfolio site and see how I can improve my site to be more performant, user-friendly or accessible. My last portfolio was built in React with Gatsby and out of the box, it performed a-lot of code optimization and took about 3.8 seconds to load on a simulated test.`,
+			`Every year I like to work on my portfolio site and see how I can improve my site to be more performant, user-friendly or accessible. My last portfolio was built in React with Gatsby and out of the box, it performed a-lot of code optimization and took about 3.6 seconds to load on a simulated test.`,
 		],
 		moreDetails: [
 			{
 				sectionHeader: "Problem",
 				sectionHeaderImageName: "",
-				sectionDetails: `3.8 seconds to fully load is not slow but Google's benchmark for a performant site is under 3 seconds. After performing an analysis of my portfolio, I realized I didn't have much need for client-side JavaScript and most my interactions can be done with HTML and CSS. I built my site with React, so I cant just remove the JavaScript bundle, so I will have to rebuild my portfolio.`,
+				sectionDetails: `3.6 seconds to fully load is not slow but Google's benchmark for a performant site is under 3 seconds. After performing an analysis of my portfolio, I realized I didn't have much need for client-side JavaScript and most my interactions can be done with HTML and CSS. I built my site with React, so I cant just remove the JavaScript bundle, so I will have to rebuild my portfolio.`,
 				sectionFooterImageName: "",
 			},
 			{
 				sectionHeader: "Process",
 				sectionHeaderImageName: "",
-				sectionDetails: `For my new framework, I settled on 11ty, which is a simple static site generator that outputs HTML and lets you use a variety of JS based templating languages. For CI/CD, I used Buddy and Netlify to deploy and run Google Lighthouse tests to keep track of my performance scores per build. Most issues were easily fixed and the audit will give tips on how to fix them.<br/><br/> When I got to implementing Google Analytics, it added 1 second to my load time and my loading speed almost doubled, so I decided to move the script to the end of the body and added an listener that will only load GA tracking when the page have finished loading. My load time went back to normal but my bounce rate would not be 100% accurate. Do I want to sacrifice performance for more accurate data? Luckily I am implementing for a portfolio site so most traffic would be direct and I would only care about the users that actually navigate on my site.`,
+				sectionDetails: `For my new framework, I settled on 11ty, which is a simple static site generator that outputs HTML and lets you use a variety of JS based templating languages. For CI/CD, I used Buddy and Netlify to deploy and run automated Google Lighthouse tests to keep track of my performance scores per build, which I set to 100. When the build under-performs, the audit will give tips on how to fix them.<br/><br/> When I first implemented Google Analytics, it added 1 second to my load time and doubled my loading speed, so I decided to move the script to the end of the body and added an listener that will only load GA tracking when the page have finished loading. My load time went back to normal but my bounce rate would not be 100% accurate. Do I want to sacrifice performance for more accurate data? Since I am implementing for a portfolio site, most of my users would be direct and my main demographics would be users that navigates around the site, so having less accurate bounce rate would not be a big factor.`,
 			},
 			{
 				sectionHeader: "Result",
 				projectStats: "true",
-				sectionDetails: `I refreshed the design of my portfolio and the only Javascripts on my site is related to tracking and service workers. For the mobile navigation menu, I used HTML checkboxes and CSS instead of a JavaScript Click function. I also used Webpack to generate a build date into the footer instead of relying on a date function as most article suggests. By using Google Lighthouse performance tips, I was able to create a portfolio thats loads under 1 second and learned a lot about accessibility and performance. &#x1F389;`,
+				sectionDetails: `I refreshed the design of my portfolio and the only Javascript on my site is related to tracking and service workers. For the mobile navigation menu, I used HTML checkboxes and CSS instead of a JavaScript approach. I also used Webpack to generate a build date into the footer instead of relying on a date function as most article suggests. By using Google Lighthouse performance tips, I was able to create a portfolio thats loads under 1 second and learned a lot about accessibility and performance. &#x1F389;`,
 				sectionFooterImageName: "",
 			},
 		],

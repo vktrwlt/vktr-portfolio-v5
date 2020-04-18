@@ -75,6 +75,7 @@
 		"update-check": "npx npm-check-updates",
 		"serve": "npx live-server ./dist --port=8080 --host=localhost"
 	},
+
 	"author": "Victor Tsang",
 	"license": "MIT",
 	"repository": {
