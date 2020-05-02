@@ -45,4 +45,5 @@ html(lang='en-us' class='antialiased overflow-y-scroll')
 		script(src=assets["main.js"])
 
 	if(project.production)
-		script(defer src=assets["defer.js"])
+		script
+			include ../inline/scripts.js

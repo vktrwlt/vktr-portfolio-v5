@@ -7,7 +7,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
 	entry: {
 		main: path.resolve(paths.srcAssets, "js/main.js"),
-		defer: path.resolve(paths.srcAssets, "js/defer.js"),
 	},
 	output: {
 		path: path.resolve(paths.dist),
