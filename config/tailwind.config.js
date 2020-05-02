@@ -233,7 +233,7 @@ module.exports = {
 		},
 		fontFamily: {
 			sans: [
-				"Ubuntu",
+				"Muli",
 				"system-ui",
 				"-apple-system",
 				"BlinkMacSystemFont",

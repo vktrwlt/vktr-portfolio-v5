@@ -2,13 +2,11 @@
 	@apply text-4xl;
 }
 
-
 @screen lg {
-.hero {
-	@apply text-5xl;
+	.hero {
+		@apply text-5xl;
+	}
 }
-}
-
 
 .headline-1 {
 	@apply text-3xl;
