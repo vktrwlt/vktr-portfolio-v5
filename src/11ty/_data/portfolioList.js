@@ -23,24 +23,24 @@ module.exports = [
 			"CI/CD",
 		],
 		about: [
-			`Every year I like to work on my portfolio site and see how I can improve my site to be more performant, user-friendly or accessible. My last portfolio was built in React with Gatsby and out of the box, it performed a-lot of code optimization and took about 3.6 seconds to load on a simulated test.`,
+			`Every year I like to work on my portfolio site and see how I can improve my site to be more performant, user-friendly or accessible. My last portfolio was built with Gatsby and according to Google Lighthouse, takes about 3.6 seconds for it to fully load. I'm pretty sure I can improve that load time.`,
 		],
 		moreDetails: [
 			{
 				sectionHeader: "Problem",
 				sectionHeaderImageName: "",
-				sectionDetails: `3.6 seconds to fully load is not slow but Google's benchmark for a performant site is under 3 seconds. After performing an analysis of my portfolio, I realized I didn't have much need for client-side JavaScript and most my interactions can be done with HTML and CSS. I built my site with React, so I can't just remove the JavaScript bundle, so I will have to rebuild my portfolio.`,
+				sectionDetails: `My portfolio have a minimalistic design but still takes 3.6 seconds to load, which is very odd. After performing an analysis on my portfolio, I realized the bottle-neck came from my JavaScript files and most of it is due to the Gatsby framework. Since it is a hybrid static site, it does require React to re-hydrate the portfolio. I have minimal need for JavaScript but I can't remove it due to the way the site is generated, so I decided to create a new portfolio with minimal JavaScript.`,
 				sectionFooterImageName: "",
 			},
 			{
 				sectionHeader: "Process",
 				sectionHeaderImageName: "",
-				sectionDetails: `For my new framework, I settled on 11ty, which is a simple static site generator that outputs HTML and lets you use a variety of JS based templating languages. For CI/CD, I used Buddy and Netlify to deploy and run automated Google Lighthouse tests to keep track of my performance scores per build, which I set to 100. When the build under-performs, the audit will give tips on how to fix them.<br/><br/> When I first implemented Google Analytics, it added 1 second to my load time and doubled my loading speed, so I decided to move the script to the end of the body and added an listener that will only load GA tracking when the page have finished loading. My load time went back to normal but my bounce rate would not be 100% accurate. Do I want to sacrifice performance for more accurate data? Since I am implementing for a portfolio site, most of my users would be direct and my main demographics would be users that navigates around the site, so having less accurate bounce rate would not be a big factor.`,
+				sectionDetails: `For my new framework, I settled on 11ty, which is a simple static site generator that compiles JavaScript based templates into HTML. For CI/CD, I used Buddy and Netlify to run Lighthouse tests to keep track of my performance scores per build. When the test falls below 100, the build will fail and will output hints on how to fix them.<br/><br/> When I first implemented Google Analytics, it added 1 second to my load time and doubled my loading speed, so I decided to move the script to the end of the body and added an event that will only load GA tracking when the page have finished loading. My bounce rate would not be 100% accurate, but do I want to sacrifice performance for more accurate data? Luckily, it was an easy choice, since I am implementing for a portfolio site, most of my users would be coming from direct traffic. My main demographics would be users that stays and navigates around the site, so having less accurate bounce rate would not be a big factor.`,
 			},
 			{
 				sectionHeader: "Result",
 				projectStats: "true",
-				sectionDetails: `I refreshed the design of my portfolio and the only Javascript on my site is related to tracking and service workers. For the mobile navigation menu, I used HTML checkboxes and CSS instead of a JavaScript approach. I also used Webpack to generate a build date into the footer instead of relying on a date function as most article suggests. By using Google Lighthouse performance tips, I was able to create a portfolio thats loads under 1 second and learned a lot about accessibility and performance. &#x1F389;`,
+				sectionDetails: `I rebuilt my portfolio as a true static page and was able to include very minimal JavaScript. Instead of using JavaScript to toggle a mobile navigation menu, I was able to use HTML checkboxes and CSS to replicate the same effect. I also used Webpack to generate and insert a build year on the footer instead of using a Date function. I'm glad there were non JavaScript alternatives to get the same result. What made the development process easier was running automated Lighthouse tests and by using Google Lighthouse performance tips, I was able to create a portfolio thats meets Google's performant criteria and learned a lot about accessibility and performance. &#x1F389;`,
 				sectionFooterImageName: "",
 			},
 		],
