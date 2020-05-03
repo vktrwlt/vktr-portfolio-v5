@@ -52,7 +52,7 @@ module.exports = merge(webpackBaseConfig, {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: "assets/css/[name].[chunkhash].css",
+			filename: "assets/css/main.css",
 		}),
 		new WebpackAssetsManifest({
 			output: path.resolve(paths.src, "11ty/_data/assets.json"),

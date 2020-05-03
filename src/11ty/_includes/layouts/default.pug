@@ -18,7 +18,13 @@ html(lang='en-us' class='antialiased overflow-y-scroll')
 		style
 			include ../inline/fonts.css
 
-		link(rel="preload" href="/assets/fonts/muli-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin)
+		if(project.production)
+			style
+				include ../../../../dist/assets/css/main.css
+		else
+			link(rel='stylesheet', href=assets["main.css"])
+
+		//- link(rel="preload" href="/assets/fonts/muli-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin)
 
 		link(rel="preconnect" crossorigin href="https://stats.g.doubleclick.net")
 		link(rel="preconnect" crossorigin href="https://www.google-analytics.com")
@@ -27,7 +33,6 @@ html(lang='en-us' class='antialiased overflow-y-scroll')
 		link(rel="manifest" href="/manifest.json")
 		link(rel="apple-touch-icon" href="/apple-touch-icon.png")
 		link(rel="shortcut icon", href="/favicon.ico")
-		link(rel='stylesheet', href=assets["main.css"])
 
 	include ../sprites/sprites.svg
 

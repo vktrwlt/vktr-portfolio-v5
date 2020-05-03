@@ -6,7 +6,10 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
 	entry: {
-		main: path.resolve(paths.srcAssets, "js/main.js"),
+		main: [
+			path.resolve(paths.srcAssets, "js/main.js"),
+			path.resolve(paths.srcAssets, "scss/main.scss"),
+		],
 	},
 	output: {
 		path: path.resolve(paths.dist),

@@ -60,6 +60,9 @@ module.exports = merge(webpackBaseConfig, {
 		new MiniCssExtractPlugin({
 			filename: "css/[name].css",
 		}),
+		new MiniCssExtractPlugin({
+			filename: "assets/css/main.css",
+		}),
 		new WebpackAssetsManifest({
 			output: path.resolve(paths.src, "11ty/_data/assets.json"),
 			publicPath: "/assets/",
