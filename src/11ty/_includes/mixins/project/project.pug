@@ -6,21 +6,21 @@ mixin project(index)
 		div.my-8
 			+picture(project.imagePath,project.heroName,['webp','jpg'], "")
 	section.my-4
-		h2.headline-2.text-bold My Role
+		h2.headline-2.font-medium My Role
 		ul.list-disc
 			if project.role
 				each role in project.role
 					li.ml-8
 						p !{role}
 	section.my-4
-		h2.headline-2.text-bold Tech Stack
+		h2.headline-2.font-bold Tech Stack
 		ul(class="tech-stack__list")
 			if project.tech
 				each stack in project.tech
 					li(class="tech-stack__item")
 						p !{stack}
 	section.my-4
-		h2.headline-2.text-bold About this project
+		h2.headline-2.font-bold About this project
 		div
 			if project.about
 				each paragraph in project.about
@@ -28,7 +28,7 @@ mixin project(index)
 	if(project.moreDetails)
 		each section in project.moreDetails
 			section.my-4
-				h2.headline-2.text-bold=section.sectionHeader
+				h2.headline-2.font-bold=section.sectionHeader
 				div
 					p(class="mb-4 last:mb-0") !{section.sectionDetails}
 				if(section.projectStats)

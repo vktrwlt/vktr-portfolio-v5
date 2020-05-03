@@ -1,5 +1,5 @@
 .hero {
-	@apply text-4xl;
+	@apply text-4xl font-bold;
 }
 
 @screen lg {
@@ -9,10 +9,10 @@
 }
 
 .headline-1 {
-	@apply text-3xl;
+	@apply text-3xl font-bold;
 }
 .headline-2 {
-	@apply text-2xl;
+	@apply text-2xl font-bold;
 }
 
 .headline-3 {

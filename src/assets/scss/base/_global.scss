@@ -1,8 +1,13 @@
 p {
-	@apply text-lg;
+	@apply text-xl;
 	&:not(:last-child) {
 		@apply mb-4;
 	}
+}
+
+td,
+th {
+	@apply text-xl;
 }
 
 h1,

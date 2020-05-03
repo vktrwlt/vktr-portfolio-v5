@@ -29,7 +29,7 @@ module.exports = [
 			{
 				sectionHeader: "Problem",
 				sectionHeaderImageName: "",
-				sectionDetails: `3.6 seconds to fully load is not slow but Google's benchmark for a performant site is under 3 seconds. After performing an analysis of my portfolio, I realized I didn't have much need for client-side JavaScript and most my interactions can be done with HTML and CSS. I built my site with React, so I cant just remove the JavaScript bundle, so I will have to rebuild my portfolio.`,
+				sectionDetails: `3.6 seconds to fully load is not slow but Google's benchmark for a performant site is under 3 seconds. After performing an analysis of my portfolio, I realized I didn't have much need for client-side JavaScript and most my interactions can be done with HTML and CSS. I built my site with React, so I can't just remove the JavaScript bundle, so I will have to rebuild my portfolio.`,
 				sectionFooterImageName: "",
 			},
 			{
