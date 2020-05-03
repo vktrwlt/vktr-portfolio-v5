@@ -11,12 +11,15 @@
 		"purgecss",
 		"pug"
 	],
-	"dependencies": {},
+	"dependencies": {
+		"netlify-plugin-a11y": "0.0.8"
+	},
 	"devDependencies": {
 		"@11ty/eleventy": "^0.10.0",
 		"@babel/core": "^7.9.0",
 		"@babel/preset-env": "^7.9.0",
 		"@fullhuman/postcss-purgecss": "^2.1.0",
+		"@netlify/build": "^0.4.13",
 		"autoprefixer": "^9.7.5",
 		"babel-loader": "^8.1.0",
 		"babel-preset-env": "^1.7.0",
@@ -75,7 +78,6 @@
 		"update-check": "npx npm-check-updates",
 		"serve": "npx live-server ./dist --port=8080 --host=localhost"
 	},
-
 	"author": "Victor Tsang",
 	"license": "MIT",
 	"repository": {
