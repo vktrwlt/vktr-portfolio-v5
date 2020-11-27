@@ -79,6 +79,6 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/vktrwlt/11ty-tailwind-webpack-starter.git"
+		"url": "git+https://github.com/vktrwlt/vktr-portfolio-v5.git"
 	}
 }

@@ -20,8 +20,8 @@ document.addEventListener(
 ga("create", "UA-131565495-1", "auto");
 ga("send", "pageview");
 
-if ("serviceWorker" in navigator) {
-	window.addEventListener("load", function () {
-		navigator.serviceWorker.register("/service-worker.js");
-	});
-}
+// if ("serviceWorker" in navigator) {
+// 	window.addEventListener("load", function () {
+// 		navigator.serviceWorker.register("/service-worker.js");
+// 	});
+// }

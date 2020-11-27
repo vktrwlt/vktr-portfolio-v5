@@ -17,7 +17,8 @@ module.exports = function (eleventyConfig) {
 
 	// minify the html output when running in prod and enable pwa
 	if (projectVars.production) {
-		eleventyConfig.addPlugin(pluginPWA);
+		// disabled PWA to benchmark lighthouse performance
+		// eleventyConfig.addPlugin(pluginPWA); 
 		eleventyConfig.addTransform(
 			"htmlmin",
 			require("../build/scripts/minify-html")
