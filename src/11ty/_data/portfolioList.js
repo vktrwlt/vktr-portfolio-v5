@@ -3,43 +3,35 @@ module.exports = [
 		id: "11ty-portfolio",
 		title: "11ty portfolio",
 		description:
-			"A static site portfolio built using 11ty, Pug templates, TailwindCSS, and Webpack",
+			"A static site portfolio built using 11ty, Pug templates, TailwindCSS, <span class='inline-block'>and Webpack</span>",
 		imagePath: "/assets/images/11ty-portfolio",
 		heroName: "hero",
 		url: "/project/11ty-portfolio",
 		bgColor: "bg-blue-200",
 		role: [
 			"Used 11ty to generate a portfolio that score all 100's in Google Lighthouse test",
-			"Developed a 11ty Tailwind Pug Starter Kit. Available on <a class='text-custom-blue' data-external='true' href='https://github.com/vktrwlt/pugsum' target='_blank' rel='noopener noreferrer' title='View my 11ty Tailwind Pug starter kit on Github'>Github</a>",
 		],
-		tech: [
-			"11ty",
-			"TailwindCSS",
-			"SCSS",
-			"Pug",
-			"Webpack",
-			"Netlify",
-			"CI/CD",
-		],
+		tech: ["11ty", "TailwindCSS", "SCSS", "Pug", "Webpack", "Netlify", "CI/CD"],
 		about: [
-			`Every year I like to work on my portfolio site and see how I can improve my site to be more performant, user-friendly or accessible. My last portfolio was built with Gatsby and according to Google Lighthouse, takes about 3.6 seconds for it to fully load. I'm pretty sure I can improve that load time.`,
+			`Every year I like to work on my portfolio site and see how I can improve my site to be more performant, user-friendly or accessible. My last portfolio was built with Gatsby and according to Google Lighthouse, took about 4.4 seconds to fully load.`,
 		],
 		moreDetails: [
 			{
 				sectionHeader: "Problem",
 				sectionHeaderImageName: "",
-				sectionDetails: `My portfolio have a minimalistic design but still takes 3.6 seconds to load, which is very odd. After performing an analysis on my portfolio, I realized the bottle-neck came from my JavaScript files and most of it is due to the Gatsby framework. Since it is a hybrid static site, it does require React to re-hydrate the website. I have minimal need for JavaScript but can't remove it due to the way the site is created, so I decided to create a new portfolio with minimal JavaScript.`,
+				sectionDetails: `My Gatsby portfolio had a minimalistic design and still takes 4.4 seconds to load. After performing an analysis on the site, I realized the bottle-neck came from the Gatsby framework. Since it is a hybrid static site, it does require React to re-hydrate the website. I didn't have a heavy need for JavaScript but can't really remove it without breaking my site, so I decided to rebuild my portfolio as a true static site.`,
 				sectionFooterImageName: "",
 			},
 			{
 				sectionHeader: "Process",
 				sectionHeaderImageName: "",
-				sectionDetails: `For my new framework, I settled on 11ty, which is a simple static site generator that compiles JavaScript templates into HTML. For CI/CD, I used Buddy and Netlify to run Lighthouse tests to keep track of my performance scores per build. When the test falls below 100, the build will fail and will output hints on how to fix them.<br/><br/> One problem that I faced was Google Analytics, going through the standard implementation would double the loading speed of my previous build, so I decided to defer the script until after the page is finished loading. This fixed my loading speed problem but as a result, I would have less accurate data for bounce rates. I believe the trade-off is worth it because users can enjoy a faster loading site and from past experience, the bounce rate tend to be less actionable for my portfolio.`,
+				sectionDetails: `For my new framework, I settled on 11ty, which is a simple static site generator that compiles JavaScript templates into HTML.
+				11ty lets you use a variety of server-side JS templates, I chosed Pug because it has a very succint syntax. As for styling, I went with TailwindCSS because it lets me iterate on my porfolio faster and I didnt have to write a lot of css, instead I would chain their utilities classes to create the styling that I need. During the production build proccess, the unused styles are stripped out and the css file is minified and inlined into the HTML file. For CI/CD, I used Buddy and Netlify to run Lighthouse tests to keep track of my performance scores per build. When the test falls below 100, the build will fail and will output hints on how to fix them.`,
 			},
 			{
 				sectionHeader: "Result",
 				projectStats: "true",
-				sectionDetails: `I rebuilt my portfolio as a true static page and was able to include very minimal JavaScript. Instead of using JavaScript to toggle a mobile navigation menu, I was able to use HTML checkboxes and CSS to replicate the same effect. I also used Webpack to generate and insert a build year on the footer instead of using a Date function. I'm glad there are non JavaScript alternatives to get the same result. What made the development process easier was running automated Lighthouse tests and by using Google Lighthouse performance tips, I was able to create a portfolio thats meets Google's performant criteria and learned a lot about accessibility and performance. &#x1F389;`,
+				sectionDetails: `I rebuilt my portfolio as a true static page and was able to include very minimal JavaScript. While Gatsby did come with code and build optimizations out of the box, I was able to create a similar version with 75% faster load times by switching to 11ty. During the process, I learned a lot about performance and accesibility and was able to create a website thats meets Google's performant criteria. &#x1F389;`,
 				sectionFooterImageName: "",
 			},
 		],
