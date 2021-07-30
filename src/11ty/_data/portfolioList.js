@@ -1,7 +1,88 @@
 module.exports = [
 	{
+		id: "netbase-on-tour",
+		title: "NetBase On-Tour",
+		description: "Event microsite for NetBase On-Tour",
+		imagePath: "/assets/images/netbase",
+		heroName: "hero",
+		url: "/project/netbase-on-tour",
+		bgColor: "bg-red-200",
+		role: [
+			"Tech Lead",
+			"Improved page load speeds by 48%",
+			"Developed an efficient workflow system",
+		],
+		tech: [
+			"HTML5 / CSS3",
+			"React",
+			"Gatsby",
+			"GraphQL",
+			"Airtable CMS",
+			"Jenkins",
+		],
+		about: [
+			`NetBase is the next generation consumer and market intelligence platform, delivering contextual insights to reveal business trends, connect with consumers, and understand the story behind competitors and the market. Every year, the marketing team would host a roadshow across the world to demo their platform. The marketing team needed an event microsite that is easy to update and is able to display event details, speaker bios, and agendas for each city that they are visiting.`,
+		],
+		moreDetails: [
+			{
+				sectionHeader: "Problem",
+				sectionHeaderImageName: "",
+				sectionDetails: `The first event site was built on WordPress and Divi theme. The source of truth for the content was all stored in a Google Sheet  and was updated on a regular basis, which means the site have to be updated as well.`,
+				sectionFooterImageName: "",
+			},
+			{
+				sectionHeader: "Process",
+				sectionHeaderImageName: ``,
+				sectionDetails: `Working with the stakeholders, I gathered requirements and scoped out work for the 2nd interation of the event microsite and introduced the team to a JAMstack architecture which has many benefits over the WordPress counterpart. The front-end was built using Gatsby, a React-based static site generator, and the back-end leveraged Airtable as the content management system. Airtable CMS offered a "Google Sheets" experience and offers an API that is simple for developers to work with. Finally I implemented an autonomous CI/CD pipeline that allows the team to update, preview, and deploy content anytime. `,
+			},
+			{
+				sectionHeader: "Result",
+				sectionDetails: `After switching to the JAMstack, we observed an increase in workflow efficiency and improved page load times by 48%. Airtable replaces Google Sheets as the source of truth and content changes are automatically updated on the event site whenever the updates are published, thus reducing duplicate work. Developers are also happy since they get to worry less about page performance since the Gatsby framework automates code splitting, image optimization, inlining critical styles, lazy-loading, prefetching resources, and more to ensure the site is fully optimized.`,
+				sectionFooterImageName: "",
+			},
+		],
+	},
+
+	// {
+	// 	title: "NetBase Pro",
+	// 	description: "Event microsite for company's tradeshows and conferences",
+	// 	imageUrl:
+	// 		"https://www.mamp.info/__we_thumbs__/1284_4_MAMP-PRO-MacBook-Pro.png",
+	// 	url: "/netbase-pro",
+	// 	bgColor: "bg-red-200",
+	// },
+	{
+		id: "dangfoods",
+		title: "Dang foods",
+		description:
+			"Custom WordPress Development for Dang foods' <span class='inline-block'>e-Commerce</span> site",
+		imagePath: "/assets/images/dangfoods",
+		heroName: "hero",
+		url: "/project/dangfoods",
+		bgColor: "bg-green-200",
+		role: [
+			"Front-End Developer",
+			"Developed the site based on design specs provided by client",
+			"Added Advanced Custom Fields for end-users to upload products with ease",
+		],
+		tech: [
+			"HTML5 / CSS3",
+			"WordPress",
+			"PHP",
+			"jQuery",
+			"Zurb Foundation",
+			"Adobe Photoshop",
+		],
+		about: [
+			`Dang Foods is a family-operated Asian snacks company located in the Bay Area and their e-Commerce site was hosted on WordPress. Their CMS configuration was not set-up properly and they were updating content directly onto the templates.`,
+			`As a team with another Freelance Developer, we updated the website with the design mockups provided by the client.
+			In the process, we implemented Advanced Custom Fields and Custom Post Types to give a much cleaner back-end experience. We completed the task in two weeks and the client was happy that he could make product updates with ease.`,
+		],
+	},
+
+	{
 		id: "11ty-portfolio",
-		title: "11ty portfolio",
+		title: "My portfolio",
 		description:
 			"A static site portfolio built using 11ty, Pug templates, TailwindCSS, <span class='inline-block'>and Webpack</span>",
 		imagePath: "/assets/images/11ty-portfolio",
@@ -36,48 +117,4 @@ module.exports = [
 			},
 		],
 	},
-	// {
-	// 	title: "NetBase Pro",
-	// 	description: "Event microsite for company's tradeshows and conferences",
-	// 	imageUrl:
-	// 		"https://www.mamp.info/__we_thumbs__/1284_4_MAMP-PRO-MacBook-Pro.png",
-	// 	url: "/netbase-pro",
-	// 	bgColor: "bg-red-200",
-	// },
-	{
-		id: "dangfoods",
-		title: "Dang foods",
-		description:
-			"Custom WordPress Development for Dang foods' <span class='inline-block'>e-Commerce</span> site",
-		imagePath: "/assets/images/dangfoods",
-		heroName: "hero",
-		url: "/project/dangfoods",
-		bgColor: "bg-green-200",
-		role: [
-			"Front-End Developer",
-			"Redesigned the site based on design specs provided by client",
-			"Added Advanced Custom Fields for end-users to upload products with ease",
-		],
-		tech: [
-			"HTML5 / CSS3",
-			"WordPress",
-			"PHP",
-			"jQuery",
-			"Zurb Foundation",
-			"Adobe Photoshop",
-		],
-		about: [
-			`Dang Foods is a family-operated Asian snacks company located in the Bay Area. Their current setup was not working well for them. Even though it was hosted on WordPress, they were making  conent updates directly on the templates.`,
-			`As a team with another Freelance Developer, we refreshed the look of the website with the design specs provided by the client.
-			In the process, we implemented Advanced Custom Fields and Custom Post Types to give a much cleaner backend experience. We completed the task in two weeks and the client was happy that he could make product updates with ease.`,
-		],
-	},
-	// {
-	// 	title: "Klipfolio Visualizations",
-	// 	description: "Event microsite for company's tradeshows and conferences",
-	// 	imageUrl:
-	// 		"https://www.mamp.info/__we_thumbs__/1284_4_MAMP-PRO-MacBook-Pro.png",
-	// 	url: "/klipfolio",
-	// 	bgColor: "bg-purple-200",
-	// },
 ];
