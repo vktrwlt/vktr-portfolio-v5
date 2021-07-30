@@ -17,4 +17,9 @@ module.exports = {
 		metaDescription:
 			"Custom WordPress Development for Dang Foods' e-Commerce site",
 	},
+	"netbase-on-tour": {
+		metaTitle: "NetBase On-Tour | Victor Tsang",
+		metaDescription:
+			"Migrated event microsite from WordPress to JAMstack and improved page load speeds by 43%",
+	},
 };

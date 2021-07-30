@@ -2,7 +2,8 @@ module.exports = [
 	{
 		id: "netbase-on-tour",
 		title: "NetBase On-Tour",
-		description: "Event microsite for NetBase On-Tour",
+		description:
+			"Migrated event microsite from WordPress to JAMstack and improved page load speeds by 43%",
 		imagePath: "/assets/images/netbase",
 		heroName: "hero",
 		url: "/project/netbase-on-tour",
@@ -10,7 +11,7 @@ module.exports = [
 		role: [
 			"Tech Lead",
 			"Improved page load speeds by 43%",
-			"Developed an efficient workflow system",
+			"Improved in workflow efficiency",
 		],
 		tech: [
 			"HTML5 / CSS3",
@@ -51,34 +52,34 @@ module.exports = [
 	// 	url: "/netbase-pro",
 	// 	bgColor: "bg-red-200",
 	// },
-	{
-		id: "dangfoods",
-		title: "Dang foods",
-		description:
-			"Custom WordPress Development for Dang foods' <span class='inline-block'>e-Commerce</span> site",
-		imagePath: "/assets/images/dangfoods",
-		heroName: "hero",
-		url: "/project/dangfoods",
-		bgColor: "bg-green-200",
-		role: [
-			"Front-End Developer",
-			"Developed the site based on design specs provided by client",
-			"Added Advanced Custom Fields for end-users to upload products with ease",
-		],
-		tech: [
-			"HTML5 / CSS3",
-			"WordPress",
-			"PHP",
-			"jQuery",
-			"Zurb Foundation",
-			"Adobe Photoshop",
-		],
-		about: [
-			`Dang Foods is a family-operated Asian snacks company located in the Bay Area and their e-Commerce site was hosted on WordPress. Their CMS configuration was not set-up properly and they were updating content directly onto the templates.`,
-			`As a team with another Freelance Developer, we updated the website with the design mockups provided by the client.
-			In the process, we implemented Advanced Custom Fields and Custom Post Types to give a much cleaner back-end experience. We completed the task in two weeks and the client was happy that he could make product updates with ease.`,
-		],
-	},
+	// {
+	// 	id: "dangfoods",
+	// 	title: "Dang foods",
+	// 	description:
+	// 		"Custom WordPress Development for Dang foods' <span class='inline-block'>e-Commerce</span> site",
+	// 	imagePath: "/assets/images/dangfoods",
+	// 	heroName: "hero",
+	// 	url: "/project/dangfoods",
+	// 	bgColor: "bg-green-200",
+	// 	role: [
+	// 		"Front-End Developer",
+	// 		"Developed the site based on design specs provided by client",
+	// 		"Added Advanced Custom Fields for end-users to upload products with ease",
+	// 	],
+	// 	tech: [
+	// 		"HTML5 / CSS3",
+	// 		"WordPress",
+	// 		"PHP",
+	// 		"jQuery",
+	// 		"Zurb Foundation",
+	// 		"Adobe Photoshop",
+	// 	],
+	// 	about: [
+	// 		`Dang Foods is a family-operated Asian snacks company located in the Bay Area and their e-Commerce site was hosted on WordPress. Their CMS configuration was not set-up properly and they were updating content directly onto the templates.`,
+	// 		`As a team with another Freelance Developer, we updated the website with the design mockups provided by the client.
+	// 		In the process, we implemented Advanced Custom Fields and Custom Post Types to give a much cleaner back-end experience. We completed the task in two weeks and the client was happy that he could make product updates with ease.`,
+	// 	],
+	// },
 
 	{
 		id: "11ty-portfolio",
