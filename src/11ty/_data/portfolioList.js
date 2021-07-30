@@ -9,7 +9,7 @@ module.exports = [
 		bgColor: "bg-red-200",
 		role: [
 			"Tech Lead",
-			"Improved page load speeds by 48%",
+			"Improved page load speeds by 43%",
 			"Developed an efficient workflow system",
 		],
 		tech: [
@@ -37,7 +37,7 @@ module.exports = [
 			},
 			{
 				sectionHeader: "Result",
-				sectionDetails: `After switching to the JAMstack, we observed an increase in workflow efficiency and improved page load times by 48%. Airtable replaces Google Sheets as the source of truth and content changes are automatically updated on the event site whenever the updates are published, thus reducing duplicate work. Developers are also happy since they get to worry less about page performance since the Gatsby framework automates code splitting, image optimization, inlining critical styles, lazy-loading, prefetching resources, and more to ensure the site is fully optimized.`,
+				sectionDetails: `After switching to the JAMstack, we observed an increase in workflow efficiency and improved page load times by 43%. Airtable replaces Google Sheets as the source of truth and content changes are automatically updated on the event site whenever the updates are published, thus reducing duplicate work. Developers are also happy since they get to worry less about page performance since the Gatsby framework automates code splitting, image optimization, inlining critical styles, lazy-loading, prefetching resources, and more to ensure the site is fully optimized.`,
 				sectionFooterImageName: "",
 			},
 		],
