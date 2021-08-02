@@ -22,19 +22,19 @@ module.exports = [
 			"Jenkins",
 		],
 		about: [
-			`NetBase is the next generation consumer and market intelligence platform, delivering contextual insights to reveal business trends, connect with consumers, and understand the story behind competitors and the market. Every year, the marketing team would host a roadshow across the world to demo their platform. The marketing team needed an event microsite that is easy to update and is able to display event details, speaker bios, and agendas for each city that they are visiting.`,
+			`NetBase is a cloud-based social media analytics platform for companies and marketing agencies. Every year, the marketing team would host a roadshow across the world to demo their platform. The marketing team needed an event microsite that is easy to update and is able to display event details, speaker bios, and agendas for each city that they are visiting.`,
 		],
 		moreDetails: [
 			{
 				sectionHeader: "Problem",
 				sectionHeaderImageName: "",
-				sectionDetails: `The first event site was built on WordPress and Divi theme. The source of truth for the content was all stored in a Google Sheet  and was updated on a regular basis, which means the site have to be updated as well.`,
+				sectionDetails: `The first event site was built on WordPress and Divi theme. The source of truth for the content was all stored in a Google Sheet  and was updated on a regular basis, which means the site have to be updated as well. Updating content on the site was manual and resource consuming than it should.`,
 				sectionFooterImageName: "",
 			},
 			{
 				sectionHeader: "Process",
 				sectionHeaderImageName: ``,
-				sectionDetails: `Working with the stakeholders, I gathered requirements and scoped out work for the 2nd interation of the event microsite and introduced the team to a JAMstack architecture which has many benefits over the WordPress counterpart. The front-end was built using Gatsby, a React-based static site generator, and the back-end leveraged Airtable as the content management system. Airtable CMS offered a "Google Sheets" experience and offers an API that is simple for developers to work with. Finally I implemented an autonomous CI/CD pipeline that allows the team to update, preview, and deploy content anytime. `,
+				sectionDetails: `Working with the stakeholders of the marketing team, I gathered requirements and scoped out work for the 2nd iteration of the event microsite and introduced the team to a JAMstack architecture which has many benefits over the WordPress counterpart. The front-end was built using Gatsby, a React-based static site generator, and the back-end leveraged Airtable as the content management system. Airtable CMS offered a "Google Sheets" experience, which everyone on the team is familiar  with, and the API is simple for developers to work with. Finally I implemented an autonomous CI/CD pipeline that allows the team to update, preview, and deploy content anytime.`,
 			},
 			{
 				sectionHeader: "Result",
