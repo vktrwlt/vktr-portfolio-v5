@@ -73,7 +73,7 @@
 		"build:webpack": "cross-env NODE_ENV=production npx webpack --config ./build/webpack/webpack.prod.config.js",
 		"build:eleventy": "cross-env NODE_ENV=production npx eleventy --config ./config/eleventy.config.js",
 		"clean": "rimraf ./dist",
-		"update": "npx ncu -u; npm install",
+		"update": "npx npm-check-updates -u; npm install",
 		"update-check": "npx npm-check-updates",
 		"serve": "npx live-server ./dist --port=8080 --host=localhost"
 	},
